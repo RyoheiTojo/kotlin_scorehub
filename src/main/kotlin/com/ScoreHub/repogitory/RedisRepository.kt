@@ -1,4 +1,4 @@
-package ScoreHub.repogitory
+package com.ScoreHub.repogitory
 
 import io.lettuce.core.RedisClient
 import io.lettuce.core.api.StatefulRedisConnection
