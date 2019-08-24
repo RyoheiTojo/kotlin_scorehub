@@ -14,3 +14,7 @@ services:
       - 3000:3000
     env_file:
       - ./prometheus/grafana.env
+  redis:
+    image: redis:latest
+    ports:
+      - 6379:6379
