@@ -1,4 +1,4 @@
-package ScoreHub.repogitory
+package com.ScoreHub.repogitory
 
 import org.springframework.boot.context.properties.ConfigurationProperties
 
