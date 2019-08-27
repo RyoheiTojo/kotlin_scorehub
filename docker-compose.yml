@@ -18,3 +18,35 @@ services:
     image: redis:latest
     ports:
       - 6379:6379
+  consul_serv:
+    image: consul
+    container_name: consul_serv
+    ports:
+      - 8500:8500
+    environment:
+      - CONSUL_BIND_ADDRESS=0.0.0.0
+    command: agent -server -bootstrap-expect=1 -node=agent-one -enable-script-checks=true -client=0.0.0.0
+    networks:
+      consul:
+        ipv4_address: 172.20.20.10
+  consul_client:
+    image: consul
+    container_name: consul_client
+    environment:
+      - CONSUL_BIND_ADDRESS=172.20.20.11
+    command: agent -node=agent-two -enable-script-checks=true -join=172.20.20.10
+    volumes:
+      - "./consul.d:/consul/config"
+    depends_on:
+      - consul_serv
+    networks:
+      consul:
+        ipv4_address: 172.20.20.11
+
+networks:
+  consul:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.20.20.0/24
