@@ -7,10 +7,11 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 import com.ScoreHub.repogitory.RedisRepository
 import com.library.logmessage.log
+import org.slf4j.Logger
 
 @RestController
 @RequestMapping("home")
-class HomeController {
+class HomeController(val log: Logger) {
 
     @Autowired
     lateinit var redisRepository: RedisRepository
@@ -19,7 +20,7 @@ class HomeController {
     fun getTop(): String {
         redisRepository.redisCommands.setex("foo", 100, "bar")
 
-        ScoreHubLog.TESTMSG1.log("key" to "value") {k,v -> print(k + v)}
+        ScoreHubLog.TESTMSG1.log("key" to "value") {k,v -> log.info(k + v)}
         return "test"
     }
 }
