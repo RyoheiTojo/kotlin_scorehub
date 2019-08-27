@@ -1,0 +1,16 @@
+{
+    "service": {
+        "name": "web",
+        "tags": [
+            "rails"
+        ],
+        "port": 80,
+        "check": {
+            "args": [
+                "curl",
+                "google.com"
+            ],
+            "interval": "10s"
+        }
+    }
+}
