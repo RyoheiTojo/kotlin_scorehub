@@ -42,6 +42,13 @@ services:
     networks:
       consul:
         ipv4_address: 172.20.20.11
+  rediscli:
+    container_name: rediscli
+    build: rediscli
+    volumes:
+      - "./rediscli:/rediscli"
+    depends_on:
+      - redis
 
 networks:
   consul:

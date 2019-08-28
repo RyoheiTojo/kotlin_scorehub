@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.springframework.cloud:spring-cloud-consul-discovery:2.0.1.RELEASE">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-consul-discovery/2.0.1.RELEASE/9ef2a14ae680ce7c51fb5758f1ff7ea0fde5bbe1/spring-cloud-consul-discovery-2.0.1.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-consul-discovery/2.0.1.RELEASE/59e71630b9bcadf7eaaab15247136d35726ad9a0/spring-cloud-consul-discovery-2.0.1.RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

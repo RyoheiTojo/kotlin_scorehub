@@ -1,5 +1,5 @@
 server:
-  port: 8889
+  port: 8888
 
 management:
   endpoints:
@@ -10,4 +10,3 @@ management:
 
 redis:
   url: "redis://localhost:6379/0"
-
