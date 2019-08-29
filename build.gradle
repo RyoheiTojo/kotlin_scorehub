@@ -29,6 +29,11 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-dependencies:2.0.5.RELEASE'
     implementation 'org.springframework.boot:spring-boot-starter-web'
 
+    //implementation 'org.springframework.cloud:spring-cloud-starter-consul-config'
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-consul-config', version: '2.0.1.RELEASE'
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-config', version: '2.0.1.RELEASE'
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-consul-discovery', version: '2.0.1.RELEASE'
+
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'io.micrometer:micrometer-registry-prometheus'
 
