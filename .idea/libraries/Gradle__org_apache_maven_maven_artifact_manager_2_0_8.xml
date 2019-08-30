@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.maven:maven-artifact-manager:2.0.8">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.maven/maven-artifact-manager/2.0.8/bb5ba069e3460450b139075b91f27f7bd4007877/maven-artifact-manager-2.0.8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.maven/maven-artifact-manager/2.0.8/95e61e2c5298a2f3f0c1bb09f1025c95118b6f37/maven-artifact-manager-2.0.8-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

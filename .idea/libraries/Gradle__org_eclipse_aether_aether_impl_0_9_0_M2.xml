@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.eclipse.aether:aether-impl:0.9.0.M2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.aether/aether-impl/0.9.0.M2/eab9a4baae8de96a24c04219236363d0ca73e8a9/aether-impl-0.9.0.M2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.aether/aether-impl/0.9.0.M2/f283ef85c77708e3de069e9dc2a5f47515666a11/aether-impl-0.9.0.M2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

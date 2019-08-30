@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.maven:maven-archiver:2.6">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.maven/maven-archiver/2.6/e0f87fd4d03b9f0c09908c4d0c398acd501a11d8/maven-archiver-2.6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.maven/maven-archiver/2.6/24b598578f3fd3c2fbe1782dfbdb20c5ee2baff4/maven-archiver-2.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

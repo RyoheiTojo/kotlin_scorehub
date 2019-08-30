@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.maven.shared:maven-common-artifact-filters:1.4">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.maven.shared/maven-common-artifact-filters/1.4/de97ff2efd804f06c3698a914f2d55205742bcc4/maven-common-artifact-filters-1.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.maven.shared/maven-common-artifact-filters/1.4/d9f3631ce5fa25a81afe276e49774e86172fbb6e/maven-common-artifact-filters-1.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
