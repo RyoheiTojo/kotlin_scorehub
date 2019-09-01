@@ -48,7 +48,7 @@ services:
     volumes:
       - "./rediscli:/rediscli"
     depends_on:
-      - redis
+      - consul_client
   zookeeper:
     image: wurstmeister/zookeeper
     ports:

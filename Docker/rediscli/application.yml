@@ -1,12 +1,1 @@
-server:
-  port: 8080
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include:
-          - prometheus
-
-redis:
-  url: "redis://localhost:6379/0"

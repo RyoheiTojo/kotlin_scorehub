@@ -1,6 +1,8 @@
 spring:
   application:
     name: ScoreHub
+  profiles:
+    active: local
   cloud:
     consul:
       host: localhost
@@ -8,3 +10,4 @@ spring:
       config:
         enabled: true
         format: FILES
+
