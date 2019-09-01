@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.codehaus.plexus:plexus-archiver:2.8.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.plexus/plexus-archiver/2.8.1/303776b3f932488380e34fe43b51ab1bbd717b8a/plexus-archiver-2.8.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.plexus/plexus-archiver/2.8.1/8cc42a14a4ee05ea0212210c2c917c7420e9602c/plexus-archiver-2.8.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
