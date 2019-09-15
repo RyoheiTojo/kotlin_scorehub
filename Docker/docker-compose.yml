@@ -25,7 +25,7 @@ services:
       - 8500:8500
     environment:
       - CONSUL_BIND_ADDRESS=0.0.0.0
-    command: agent -server -bootstrap-expect=1 -node=agent-one -enable-script-checks=true -client=0.0.0.0
+    command: agent -server -bootstrap-expect=1 -node=agent-one -enable-script-checks=true -client=0.0.0.0 -ui
     networks:
       consul:
         ipv4_address: 172.20.20.10
@@ -49,32 +49,7 @@ services:
       - "./rediscli:/rediscli"
     depends_on:
       - consul_client
-  zookeeper:
-    image: wurstmeister/zookeeper
-    ports:
-      - "2181:2181"
-    networks:
-      kafka:
-        ipv4_address: 172.20.21.11
-  kafka:
-    image: wurstmeister/kafka
-    ports:
-      - "9092:9092"
-    environment:
-      KAFKA_LISTENERS: INTERNAL://kafka:9092,OUTSIDE://host.docker.internal:9092
-      KAFKA_ADVERTISED_LISTENERS: host.docker.internal
-      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-    networks:
-      kafka:
-        ipv4_address: 172.20.21.12
-
 networks:
-  kafka:
-    driver: bridge
-    ipam:
-      driver: default
-      config:
-        - subnet: 172.20.21.0/24
   consul:
     driver: bridge
     ipam:
