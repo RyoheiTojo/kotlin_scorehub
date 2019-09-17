@@ -1,4 +1,4 @@
-package com.ScoreHub.sheduler
+package com.ScoreHub.application
 
 class MessageScheduler: Runnable {
     override fun run() {
