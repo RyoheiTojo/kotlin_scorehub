@@ -8,7 +8,11 @@ import com.ScoreHub.infrastructure.RedisUserRepositoryImpl
 import com.library.logmessage.log
 import org.slf4j.Logger
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.validation.annotation.Validated
 import org.springframework.web.bind.annotation.*
+import javax.validation.constraints.NotEmpty
+import javax.validation.constraints.Pattern
+import javax.validation.constraints.Positive
 
 @RestController
 @RequestMapping("user")
@@ -41,21 +45,37 @@ class UserController(val log: Logger) {
 class ScoreController(val log: Logger) {
 
     @PostMapping("create")
-    fun createScore(@RequestBody scoreData: ScoreData) {
+    fun createScore(@RequestBody @Validated scoreData: ScoreData) {
         println(scoreData.beat)
-        println(scoreData.partScores[0].abcdata)
+        println(scoreData.partScores?.get(0)?.abcdata)
     }
 
 }
 
 data class ScoreData(
-    val title: String,
-    val musicKey: String,
-    val length: String,
-    val beat: String,
-    val composer: String,
-    val bpm: String,
-    val partScores: List<PartScoreData>
+    @field:NotEmpty(message = "Must not be empty.")
+    val title: String?,
+
+    @field:NotEmpty(message = "Must not be empty.")
+    @field:Pattern(regexp = "^Cb|Gb|Db|Ab|Eb|Bb|F|C|G|D|A|E|B|F#|C#$", message = "Unexpected format.")
+    val musicKey: String?,
+
+
+    @field:NotEmpty(message = "Must not be empty.")
+    @field:Pattern(regexp = "^[0-9]+/[0-9]+$", message = "Unexpected format.")
+    val length: String?,
+
+    @field:NotEmpty(message = "Must not be empty.")
+    @field:Pattern(regexp = "^[0-9]+/[0-9]+$", message = "Unexpected format.")
+    val beat: String?,
+
+    @field:NotEmpty(message = "Must not be empty.")
+    val composer: String?,
+
+    @field:Positive(message = "Must be postive number.")
+    val bpm: Int?,
+
+    val partScores: List<PartScoreData>?
 )
 
 data class PartScoreData (
