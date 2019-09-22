@@ -1,0 +1,14 @@
+{
+  "title": "testtitle",
+  "musicKey": "C",
+  "length": "1/4",
+  "beat": "4/4",
+  "composer": "composername",
+  "bpm": "120",
+  "partScores": [{
+    "partName": "Guitar",
+    "key": "C",
+    "midiprogram": "22",
+    "abcdata": "a b c d"
+  }]
+}

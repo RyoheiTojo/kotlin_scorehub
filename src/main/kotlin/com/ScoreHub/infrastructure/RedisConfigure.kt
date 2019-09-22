@@ -1,4 +1,4 @@
-package com.ScoreHub.repogitory
+package com.ScoreHub.infrastructure
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration

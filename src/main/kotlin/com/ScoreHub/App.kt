@@ -3,7 +3,7 @@
  */
 package com.ScoreHub
 
-import com.ScoreHub.sheduler.MessageScheduler
+import com.ScoreHub.application.MessageScheduler
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.SpringApplication
 import java.util.concurrent.ExecutorService
