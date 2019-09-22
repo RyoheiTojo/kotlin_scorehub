@@ -3,7 +3,7 @@ package com.ScoreHub.domain
 class MusicScore (
     val title: String,
     val musicKey: MusicKey,
-    val length: Int,
+    val length: NoteLength,
     val beat: Beat,
     val composer: String,
     val bpm: Bpm,

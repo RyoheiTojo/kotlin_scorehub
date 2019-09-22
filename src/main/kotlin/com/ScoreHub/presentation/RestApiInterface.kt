@@ -1,6 +1,8 @@
 package com.ScoreHub.presentation
 
 import com.ScoreHub.ScoreHubLog
+import com.ScoreHub.domain.Email
+import com.ScoreHub.domain.Password
 import com.ScoreHub.domain.UserService
 import com.ScoreHub.infrastructure.RedisUserRepositoryImpl
 import com.library.logmessage.log
@@ -22,7 +24,7 @@ class UserController(val log: Logger) {
     fun registUser(@RequestBody loginform: Loginform) {
         println(loginform.email)
         println(loginform.password)
-        usermanagement.registUser(loginform.email, loginform.password)
+        usermanagement.registUser(Email(loginform.email), Password(loginform.password))
     }
 
     @GetMapping("/top")
@@ -33,6 +35,35 @@ class UserController(val log: Logger) {
         return "test"
     }
 }
+
+@RestController
+@RequestMapping("score")
+class ScoreController(val log: Logger) {
+
+    @PostMapping("create")
+    fun createScore(@RequestBody scoreData: ScoreData) {
+        println(scoreData.beat)
+        println(scoreData.partScores[0].abcdata)
+    }
+
+}
+
+data class ScoreData(
+    val title: String,
+    val musicKey: String,
+    val length: String,
+    val beat: String,
+    val composer: String,
+    val bpm: String,
+    val partScores: List<PartScoreData>
+)
+
+data class PartScoreData (
+    val partName: String,
+    val key: String,
+    val midiprogram: String,
+    val abcdata: String
+)
 
 data class Loginform(
     val email: String,

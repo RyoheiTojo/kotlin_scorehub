@@ -10,7 +10,7 @@ class UserService {
     @Autowired
     lateinit var userStore: UserRepository
 
-    fun registUser(email: String, password: String) {
+    fun registUser(email: Email, password: Password) {
         userStore.store( User("hogehoge", 0, password, email))
     }
 
