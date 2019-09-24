@@ -1,13 +1,13 @@
 {
-  "musicKey": "b",
-  "length": "a1/4",
-  "beat": "a4/4",
-  "composer": "",
-  "bpm": "-3",
+  "title": "error score",
+  "musicKey": "B",
+  "length": "1/4",
+  "beat": "4/4",
+  "composer": "comp",
+  "bpm": "3",
   "partScores": [{
-    "partName": "Guitar",
-    "key": "C",
-    "midiprogram": "22",
-    "abcdata": "a b c d"
+    "partName": "",
+    "key": "Ca",
+    "midiprogram": "-1"
   }]
 }

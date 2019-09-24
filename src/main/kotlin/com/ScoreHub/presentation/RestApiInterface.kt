@@ -10,9 +10,8 @@ import org.slf4j.Logger
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.validation.annotation.Validated
 import org.springframework.web.bind.annotation.*
-import javax.validation.constraints.NotEmpty
-import javax.validation.constraints.Pattern
-import javax.validation.constraints.Positive
+import javax.validation.Valid
+import javax.validation.constraints.*
 
 @RestController
 @RequestMapping("user")
@@ -75,14 +74,25 @@ data class ScoreData(
     @field:Positive(message = "Must be postive number.")
     val bpm: Int?,
 
+    @field:NotNull(message = "Must not be null.")
+    @Valid
     val partScores: List<PartScoreData>?
 )
 
 data class PartScoreData (
-    val partName: String,
-    val key: String,
-    val midiprogram: String,
-    val abcdata: String
+    @field:NotEmpty(message = "Must not be empty.")
+    val partName: String?,
+
+    @field:NotEmpty(message = "Must not be empty.")
+    @field:Pattern(regexp = "^Cb|Gb|Db|Ab|Eb|Bb|F|C|G|D|A|E|B|F#|C#$", message = "Unexpected format.")
+    val key: String?,
+
+    @field:Min(value = 0, message = "Must be positive.")
+    @field:Max(value = 128, message = "Must be between 0 to 128")
+    val midiprogram: Long?,
+
+    @field:NotNull(message = "Must not be null.")
+    val abcdata: String?
 )
 
 data class Loginform(
