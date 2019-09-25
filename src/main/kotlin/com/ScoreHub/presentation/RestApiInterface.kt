@@ -75,7 +75,7 @@ data class ScoreData(
     val bpm: Int?,
 
     @field:NotNull(message = "Must not be null.")
-    @Valid
+    @field:Valid
     val partScores: List<PartScoreData>?
 )
 
